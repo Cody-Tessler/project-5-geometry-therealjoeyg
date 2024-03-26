@@ -40,12 +40,27 @@ class ShapeList:
         Returns shape with largest perimeter.
         :return: Shape -> object with largest perimeter
         """
-        return "TODO: return the shape with the largest perimeter"
+        max_perimeter = max([s.get_perimeter() for s in self.shapes])
+        t = Texttable()
+        t.add_rows([['idx', 'Class', '__str__', 'Perimeter', 'Formula', 'Area', 'Formula']] +
+            [[self.shapes.index(s), type(s).__name__, str(s), s.get_perimeter(), s.get_perimeter_formula(), 
+                s.get_area(), s.get_area_formula()] for s in self.shapes if s.get_perimeter() == max_perimeter])
+
+        return t.draw() 
 
     def get_largest_shape_by_area(self):
         """
         Returns shape with largest area.
         :return: Shape -> object with largest area
         """
-        return "TODO: return the shape with the largest area"
+        max_area = max([s.get_area() for s in self.shapes])
+        t = Texttable()
+        t.add_rows([['idx', 'Class', '__str__', 'Perimeter', 'Formula', 'Area', 'Formula']] +
+            [[self.shapes.index(s), type(s).__name__, str(s), s.get_perimeter(), s.get_perimeter_formula(),
+            s.get_area(), s.get_area_formula()] for s in self.shapes if s.get_area() == max_area])
+
+        return t.draw()
+       
+
+
         
