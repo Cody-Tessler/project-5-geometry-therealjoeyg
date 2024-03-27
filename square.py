@@ -5,6 +5,7 @@ Therefore the Square class should inherit from the Rectangle class.
 Do NOT implement the get_area() and get_perimeter() methods here.
 Those methods should be inherited from the parent class.
 """
+# Part 3
 from rectangle import Rectangle
 
 class Square(Rectangle):

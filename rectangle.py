@@ -1,5 +1,5 @@
 from shape import Shape
-
+# Part 3
 class Rectangle(Shape):
 
     def __init__(self, a, b):
