@@ -7,7 +7,7 @@ The classes you implement should use docstrings with a matching style.
 """
 
 from shape import Shape
-import math, turtle
+import math
 
 class Triangle(Shape):
 
