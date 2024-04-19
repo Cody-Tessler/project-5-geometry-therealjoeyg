@@ -16,22 +16,18 @@ jobs:
       uses: actions/checkout@v4
     - name: test shapes
       id: test-shapes
-      uses: education/autograding-command-grader@v1
+      uses: education/autograding-python-grader@v1
       with:
-        test-name: test shapes
-        setup-command: sudo -H pip3 install pytest
-        command: pytest tests/test_student_shapes.py
         timeout: 10
         max-score: 60
+        setup-command: sudo -H pip3 install pytest
     - name: test shape list
       id: test-shape-list
-      uses: education/autograding-command-grader@v1
+      uses: education/autograding-python-grader@v1
       with:
-        test-name: test shape list
-        setup-command: sudo -H pip3 install pytest
-        command: pytest tests/test_student_list.py
         timeout: 10
         max-score: 20
+        setup-command: sudo -H pip3 install pytest
     - name: Autograding Reporter
       uses: education/autograding-grading-reporter@v1
       env:
