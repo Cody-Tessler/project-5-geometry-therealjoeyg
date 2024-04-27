@@ -1,7 +1,7 @@
 """
 Implement the get_largest_shape_by_perimeter and get_largest_shape_by_area methods.
 """
-
+# Part 4
 from texttable import Texttable
 from shape import Shape
 
@@ -40,12 +40,18 @@ class ShapeList:
         Returns shape with largest perimeter.
         :return: Shape -> object with largest perimeter
         """
-        return "TODO: return the shape with the largest perimeter"
+        max_perimeter = max([s.get_perimeter() for s in self.shapes])
+        results = [s for s in self.shapes if s.get_perimeter() == max_perimeter]
+        return results[0]
+
 
     def get_largest_shape_by_area(self):
         """
         Returns shape with largest area.
         :return: Shape -> object with largest area
         """
-        return "TODO: return the shape with the largest area"
-        
+        max_area = max([s.get_area() for s in self.shapes])
+        results = [s for s in self.shapes if s.get_area() == max_area]
+        return results[0]
+       
+
